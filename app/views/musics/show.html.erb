@@ -26,8 +26,18 @@
 </p>
 
 <p>
+  <strong>Format:</strong>
+  <%= @music.format %>
+</p>
+
+<p>
   <strong>Rate:</strong>
   <%= @music.rate %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @music.notes %>
 </p>
 
 <%= link_to 'Edit', edit_music_path(@music) %> |

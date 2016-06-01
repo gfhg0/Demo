@@ -15,3 +15,17 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.music-name{
+	font-size: 10px;
+}
+.music-title{
+	font-size: 9px;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	max-width: 70px;
+}
+.img-thumbnail:hover{
+	background: #bdc0c3;
+}

@@ -1,9 +1,9 @@
 class MusicsController < ApplicationController
   before_action :set_music, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!
 
   def index
-    @musics = Music.all
+    @musics = current_user.musics
   end
 
   def show
@@ -57,6 +57,6 @@ class MusicsController < ApplicationController
     end
     
     def music_params
-      params.require(:music).permit(:artist, :title, :year, :label, :genere, :rate, :image)
+      params.require(:music).permit(:artist, :title, :year, :label, :genere, :format, :rate, :image, :notes)
     end
 end
