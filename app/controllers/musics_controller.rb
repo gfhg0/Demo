@@ -3,7 +3,11 @@ class MusicsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @musics = current_user.musics
+     if user_signed_in?
+      @musics = current_user.musics
+     else 
+      redirect_to new_user_session_path
+   end
   end
 
   def show
@@ -15,6 +19,8 @@ class MusicsController < ApplicationController
 
   def edit
   end
+
+  
 
   def create
     @music = current_user.musics.build(music_params)
@@ -57,6 +63,6 @@ class MusicsController < ApplicationController
     end
     
     def music_params
-      params.require(:music).permit(:artist, :title, :year, :label, :genere, :format, :rate, :image, :notes)
+      params.require(:music).permit(:artist, :title, :year, :label, :genere, :format, :grade, :rate, :image, :notes)
     end
 end
