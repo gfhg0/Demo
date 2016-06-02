@@ -13,8 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	background: #edecec;
+  }
 
 .music-name{
 	font-size: 10px;
@@ -27,5 +34,29 @@
   	max-width: 70px;
 }
 .img-thumbnail:hover{
-	background: #bdc0c3;
+	background: #4b4848;
+	color: #dbdada;
+}
+
+.navbar-default {
+	background-color: #3c3939;
+	border-radius: 0;
+	height: 80px;
+	padding: 15px 0;
+	border: none;
+}
+
+.navbar-brand {
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 2em;
+	font-weight: 300;
+	color: #dbdada !important;
+}
+
+.link{
+	color: #dbdada !important;
+}
+.link:hover{
+	color: #b7b5b5 !important;
 }
