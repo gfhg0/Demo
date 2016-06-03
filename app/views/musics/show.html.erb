@@ -1,40 +1,54 @@
-<p>
-  <strong>Artist:</strong>
-  <%= @music.artist %>
-</p>
+<div class="col-xs-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">Info</div>
+      <div class="panel-body">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><strong>Artist:</strong></td>
+                <td><%= @music.artist %></td>
+              </tr>
+              <tr>
+                <td><strong>Title:</strong></td>
+                <td><%= @music.title %></td>
+              </tr>
+               <tr>
+                <td><strong>Year:</strong></td>
+                <td><%= @music.year %></td>
+              </tr>
+               <tr>
+                <td><strong>Label:</strong></td>
+                <td><%= @music.label %></td>
+              </tr>
+               <tr>
+                <td><strong>Genere:</strong></td>
+                <td><%= @music.genere %></td>
+              </tr>
+              <tr>
+                <td><strong>Format:</strong></td>
+                <td><%= @music.format %></td>
+              </tr>
+              <tr>
+                <td><strong>Grade:</strong></td>
+                <td><%= @music.grade %></td>
+              </tr>
+              <tr>
+                <td><strong>Notes:</strong></td>
+                <td><%= @music.notes %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @music.title %>
-</p>
+<div class="col-xs-6">
+  <div class="img-responsive img-thumbnail">
+    <%= image_tag @music.image.url(:large) %>
+  </div>
+</div>
 
-<p>
-  <strong>Year:</strong>
-  <%= @music.year %>
-</p>
-
-<p>
-  <strong>Label:</strong>
-  <%= @music.label %>
-</p>
-
-<p>
-  <strong>Genere:</strong>
-  <%= @music.genere %>
-</p>
-
-<p>
-  <strong>Format:</strong>
-  <%= @music.format %>
-</p>
-<p>
-  <strong>Grade:</strong>
-  <%= @music.grade %>
-</p>
-<p>
-  <strong>Notes:</strong>
-  <%= @music.notes %>
-</p>
-
-<%= link_to 'Edit', edit_music_path(@music), class: 'btn btn-default' %>
+<div class="col-xs-12">
+  <%= link_to 'Edit', edit_music_path(@music), class: 'btn btn-default' %>
 <%= link_to 'Delete', @music, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
+</div>
