@@ -38,6 +38,10 @@ body {
 	color: #dbdada;
 }
 
+.disabled {
+  pointer-events: none; 
+}
+
 .navbar-default {
 	background-color: #3c3939;
 	border-radius: 0;
@@ -75,5 +79,9 @@ body {
 .pagination > .active > span,
 .pagination > .active > span:hover{
 	background-color: #4b4848;
+	border-color: #4b4848;
+	color: #dbdada;
+}
+.form-control:focus{
 	border-color: #4b4848;
 }

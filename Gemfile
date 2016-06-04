@@ -14,6 +14,8 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
+gem 'paperclip-dimension-validator'
+gem 'searchkick'
 
 group :development, :test do
   gem 'byebug'

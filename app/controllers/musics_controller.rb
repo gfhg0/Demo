@@ -22,6 +22,14 @@ class MusicsController < ApplicationController
   def edit
   end
 
+
+  def search
+    if params[:search].present?
+      @musics = Music.search(params[:search])
+    else
+      @musics = Music.all
+    end
+  end
   
 
   def create

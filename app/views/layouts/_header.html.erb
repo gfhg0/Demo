@@ -22,6 +22,12 @@
           <li><%= link_to 'Registration', new_user_registration_path, class:"link" %></li>
         <% end %>
       </ul>
+      <%= form_tag search_musics_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
+        <p>
+          <%= text_field_tag :search, params[:search], class: "form-control" %>
+          <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+        </p>
+      <% end %>
     </div>
   </div>
 </nav>
