@@ -64,3 +64,16 @@ body {
 	background-color: #3c3939;
 	color: #dbdada !important;
 }
+.center{
+	text-align: center;
+}
+
+.pagination a{
+	color: black !important;
+}
+
+.pagination > .active > span,
+.pagination > .active > span:hover{
+	background-color: #4b4848;
+	border-color: #4b4848;
+}

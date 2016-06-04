@@ -20,3 +20,10 @@
 		<%= link_to 'Add music', new_music_path, class: 'btn btn-default' %>
 	</div>
 <% end %>
+
+<div class="col-xs-12">
+  <div class="center">
+  <%= will_paginate @musics, renderer: BootstrapPagination::Rails, inner_window: 1, outer_window: 0 %>
+</div>
+</div>
+
