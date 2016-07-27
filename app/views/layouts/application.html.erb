@@ -8,9 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
 	<%= render 'layouts/header' %>
-	
 	<div class="container">
 		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: 'alert alert-info') %>
@@ -18,7 +16,5 @@
 
 		<%= yield %>
 	</div>
-
-
 </body>
 </html>

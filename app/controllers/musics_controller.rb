@@ -3,25 +3,20 @@ class MusicsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-
      if user_signed_in?
       @musics = current_user.musics.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
      else 
       redirect_to new_user_session_path
-
    end
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @music = current_user.musics.build
   end
 
-  def edit
-  end
-
+  def edit; end
 
   def search
     if params[:search].present?
